@@ -1,45 +1,40 @@
 import "./Login.css";
-import Button from "../../components/Button/index";
-
+import Button from "../../components/Button/Button";
+import Fieldform from "../../components/Fieldform/Fieldform";
+import { useState } from "react";
 //este es el codigo que tu hiciste, colocado donde yo creo que debe ir
 function Login() {
+  const [email, setEmail] = useState("");
+  const correo = "";
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Miguel</p>
-      </header>
-      <main className="App-main">
-        {" "}
+    <main className="App-main">
+      {" "}
+      <form>
+        <Fieldform
+          text="Email"
+          htmlFor="email"
+          type="email"
+          name="email"
+          id="email"
+          value={correo}
+          change={(e) => console.log(e.target.value)}
+        ></Fieldform>
+        <Fieldform
+          text="Contraseña"
+          name="email"
+          id="email"
+          value={email}
+          change={() => console.log(email)}
+        ></Fieldform>
+
         <Button
           // click={() => navigate(-1) || navigate("/")}
           // withstyles={false}
-          text="Registrate"
+          text="Enviar"
           // icon="arrow left"
         ></Button>
-        <form>
-          <div className="input-container">
-            <label>Username </label>
-            <input type="text" name="uname" required />
-            {/* {renderErrorMessage("uname")} */}
-          </div>
-          <div className="input-container">
-            <label>Password </label>
-            <input type="password" name="pass" required />
-            {/* {renderErrorMessage("pass")} */}
-          </div>
-          <Button
-            // click={() => navigate(-1) || navigate("/")}
-            // withstyles={false}
-            text="Enviar"
-            // icon="arrow left"
-          ></Button>
-        </form>
-      </main>
-      <footer className="App-footer">
-        {" "}
-        <p>Footer</p>
-      </footer>
-    </div>
+      </form>
+    </main>
   );
 }
 

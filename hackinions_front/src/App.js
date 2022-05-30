@@ -9,14 +9,14 @@ import { Footer } from "./components/Footer/Footer";
 function App() {
   return (
     <div className="App-container">
-      <Header></Header>
       <BrowserRouter>
+        <Header></Header>
         <Routes>
           <Route path="/" element={<Hackinions />} />
           <Route path="/login" element={<Login />} />
         </Routes>
+        <Footer></Footer>
       </BrowserRouter>
-      <Footer></Footer>
     </div>
   );
 }

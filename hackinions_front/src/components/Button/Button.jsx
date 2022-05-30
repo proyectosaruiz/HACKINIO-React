@@ -1,25 +1,17 @@
 import PropTypes from "prop-types";
-// import "./index.scss"
+import "./button.css";
 import React from "react";
 
-function Button({
-  href,
-  click,
-  withstyles = true,
-  text,
-  icon,
-  disabled = false,
-}) {
+function Button({ href, click, text, disabled = false }) {
   const Component = href ? "a" : "button";
   return (
     <Component
       href={href}
       onClick={() => click && click()}
-      className={!withstyles ? "btn-no-style" : ""}
+      className="button"
       to="/"
       disabled={disabled}
     >
-      {icon && <i className={icon}></i>}
       {text}
     </Component>
   );
