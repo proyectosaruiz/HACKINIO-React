@@ -1,12 +1,14 @@
 //import { Auth } from "./Auth";
 import { Link } from "react-router-dom";
+import "./Header.css";
+import Button from "../Button";
+import Access from "../Access/Access";
 
 export const Header = () => {
   return (
-    <header>
-      <h1>
-        <Link to={"/"}>Mini Twitter</Link>
-      </h1>
+    <header className="App-header">
+      <h1>HACKINIONS</h1>
+      <Access></Access>
       {/* <nav>
         <Auth />
       </nav> */}

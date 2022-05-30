@@ -1,8 +1,11 @@
-import logo from "../../../public/original.png";
-
+import logo from "./original.png";
+import "./Footer.css";
 export const Footer = () => {
-  return;
-  <img src={logo} />;
+  return (
+    <div className="App-footer">
+      {/* <img src={logo} /> */}
 
-  <footer>© 2022 HACK A BOSS</footer>;
+      <footer>© 2022 HACK A BOSS</footer>
+    </div>
+  );
 };
