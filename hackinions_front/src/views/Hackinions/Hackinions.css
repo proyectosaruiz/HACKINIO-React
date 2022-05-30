@@ -1,0 +1,59 @@
+/* .App {
+  background-color: white;
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: 5rem 1fr 3rem;
+
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-header {
+  background-color: #fdfd96;
+  grid-area: header;
+
+  color: black;
+
+  border-bottom: 2px black solid;
+}
+.App-main {
+  color: black;
+  grid-area: main;
+}
+.App-footer {
+  color: black;
+  grid-area: footer;
+} */
+
+/* esto que esta comentado lo monte con el grid */
+
+.App {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.App-header {
+  background-color: #fdfd96;
+  width: 100vw;
+  color: black;
+  position: absolute;
+  top: 0;
+  border-bottom: 2px black solid;
+}
+.App-main {
+  color: black;
+}
+.App-footer {
+  color: black;
+  bottom: 0;
+  position: absolute;
+}
