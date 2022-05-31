@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function Fieldform({ type, name, id, change, htmlFor, text, entry }) {
+function Fieldform({ type, name, id, change, htmlFor, text, value }) {
   return (
     <div>
       <label htmlFor={htmlFor}>{text}</label>
@@ -9,9 +9,9 @@ function Fieldform({ type, name, id, change, htmlFor, text, entry }) {
         type={type}
         name={name}
         id={id}
-        value={entry}
+        value={value}
         required
-        onChange={() => change && change()}
+        onChange={change}
       />
     </div>
   );

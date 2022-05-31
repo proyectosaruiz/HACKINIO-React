@@ -5,7 +5,6 @@ import { useState } from "react";
 //este es el codigo que tu hiciste, colocado donde yo creo que debe ir
 function Login() {
   const [email, setEmail] = useState("");
-  const correo = "";
   return (
     <main className="App-main">
       {" "}
@@ -16,8 +15,8 @@ function Login() {
           type="email"
           name="email"
           id="email"
-          value={correo}
-          change={(e) => console.log(e.target.value)}
+          value={email}
+          change={(e) => setEmail(e.target.value)}
         ></Fieldform>
         <Fieldform
           text="Contraseña"
