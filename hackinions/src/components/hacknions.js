@@ -1,19 +1,19 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
-import { deleteTweetService } from "../services";
+import { deleteHackinionsService } from "../services";
 import { AuthContext } from "../context/AuthContext";
 
-export const Tweet = ({ tweet, removeTweet }) => {
+export const Hackinions = ({ hackinions, removeHackinions }) => {
   const navigate = useNavigate();
   const { token, user } = useContext(AuthContext);
   const [error, setError] = useState("");
 
-  const deleteTweet = async (id) => {
+  const deleteHackinions = async (id) => {
     try {
-      await deleteTweetService({ id, token });
+      await deleteHackinionsService({ id, token });
 
-      if (removeTweet) {
-        removeTweet(id);
+      if (removeHackinions) {
+        removeHackinions(id);
       } else {
         navigate("/");
       }
@@ -23,28 +23,29 @@ export const Tweet = ({ tweet, removeTweet }) => {
   };
 
   return (
-    <article className="tweet">
-      <p>{tweet.text}</p>
-      {tweet.image ? (
+    <article className="hackinions">
+      <p>{hackinions.text}</p>
+      {hackinions.image ? (
         <img
-          src={`${process.env.REACT_APP_BACKEND}/uploads/${tweet.image}`}
-          alt={tweet.text}
+          src={`${process.env.REACT_APP_BACKEND}/uploads/${hackinions.image}`}
+          alt={hackinions.text}
         />
       ) : null}
       <p>
-        By <Link to={`/user/${tweet.user_id}`}>{tweet.email}</Link> on{" "}
-        <Link to={`/tweet/${tweet.id}`}>
-          {new Date(tweet.created_at).toLocaleString()}
+        By <Link to={`/user/${hackinions.user_id}`}>{hackinions.email}</Link> on{" "}
+        <Link to={`/hackinions/${hackinions.id}`}>
+          {new Date(hackinions.created_at).toLocaleString()}
         </Link>
       </p>
-      {user && user.id === tweet.user_id ? (
+      {user && user.id === hackinions.user_id ? (
         <section>
           <button
             onClick={() => {
-              if (window.confirm("Are you sure?")) deleteTweet(tweet.id);
+              if (window.confirm("Are you sure?"))
+                deleteHackinions(hackinions.id);
             }}
           >
-            Delete tweet
+            Borrar hackinions
           </button>
           {error ? <p>{error}</p> : null}
         </section>

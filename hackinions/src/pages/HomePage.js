@@ -1,13 +1,14 @@
-import useTweets from "../hooks/useTweets";
-import { TweetList } from "../components/TweetList";
+import useHackinions from "../hooks/useHackinions";
+import { HackinionsList } from "../components/HackinionsList";
 import { ErrorMessage } from "../components/ErrorMessage";
-import { NewTweet } from "../components/NewTweet";
+import { NewHackinions } from "../components/NewHackinions";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { Loading } from "../components/Loading";
 
 export const HomePage = () => {
-  const { tweets, error, loading, addTweet, removeTweet } = useTweets();
+  const { hackinions, error, loading, addHackinions, removeHackinions } =
+    useHackinions();
   const { user } = useContext(AuthContext);
 
   if (loading) return <Loading />;
@@ -15,9 +16,12 @@ export const HomePage = () => {
 
   return (
     <section>
-      {user ? <NewTweet addTweet={addTweet} /> : null}
-      <h1>Latest tweets</h1>
-      <TweetList tweets={tweets} removeTweet={removeTweet} />
+      {user ? <NewHackinions addHackinions={addHackinions} /> : null}
+      <h1>Latest Hackinions</h1>
+      <HackinionsList
+        Hackinions={hackinions}
+        removeHackinions={removeHackinions}
+      />
     </section>
   );
 };

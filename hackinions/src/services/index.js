@@ -98,7 +98,7 @@ export const logInUserService = async ({ email, password }) => {
   return json.data;
 };
 
-export const sendTweetService = async ({ data, token }) => {
+export const sendhacknionsService = async ({ data, token }) => {
   const response = await fetch(`${process.env.REACT_APP_BACKEND}`, {
     method: "POST",
     body: data,

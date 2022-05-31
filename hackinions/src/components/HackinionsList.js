@@ -1,17 +1,20 @@
-import { Tweet } from "./hacknions";
+import { Hackinions } from "./hacknions";
 
-export const TweetList = ({ tweets, removeTweet }) => {
-  return tweets.length ? (
-    <ul className="tweet-list">
-      {tweets.map((tweet) => {
+export const HackinionsList = ({ hackinionss, removeHackinions }) => {
+  return hackinionss.length ? (
+    <ul className="hackinions-list">
+      {hackinionss.map((hackinions) => {
         return (
-          <li key={tweet.id}>
-            <Tweet tweet={tweet} removeTweet={removeTweet} />
+          <li key={hackinions.id}>
+            <Hackinions
+              hackinions={hackinions}
+              removehackinions={removeHackinions}
+            />
           </li>
         );
       })}
     </ul>
   ) : (
-    <p>There are no tweets...</p>
+    <p>No hay Hackinions</p>
   );
 };

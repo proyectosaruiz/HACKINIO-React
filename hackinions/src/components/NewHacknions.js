@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
-import { sendTweetService } from "../services";
+import { sendHacknionsService } from "../services";
 
-export const NewTweet = ({ addTweet }) => {
+export const NewHackinions = ({ addHackinions }) => {
   const { token } = useContext(AuthContext);
   const [image, setImage] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -14,9 +14,9 @@ export const NewTweet = ({ addTweet }) => {
     try {
       setLoading(true);
       const data = new FormData(e.target);
-      const tweet = await sendTweetService({ data, token });
+      const hackinions = await sendHacknionsService({ data, token });
 
-      addTweet(tweet);
+      addHackinions(hackinions);
 
       e.target.reset();
       setImage(null);
@@ -28,14 +28,14 @@ export const NewTweet = ({ addTweet }) => {
   };
   return (
     <>
-      <h1>Add new Tweet</h1>
-      <form className="new-tweet" onSubmit={handleForm}>
+      <h1>Nuevo Hackinions</h1>
+      <form className="new-hackinions" onSubmit={handleForm}>
         <fieldset>
-          <label htmlFor="text">Text</label>
+          <label htmlFor="text">Hackinions</label>
           <input type="text" name="text" id="text" required />
         </fieldset>
         <fieldset>
-          <label htmlFor="image">Image</label>
+          <label htmlFor="image">Imagen</label>
           <input
             type="file"
             name="image"
@@ -53,9 +53,9 @@ export const NewTweet = ({ addTweet }) => {
             </figure>
           ) : null}
         </fieldset>
-        <button>Send tweet</button>
+        <button>Enviar Hackinions</button>
         {error ? <p>{error}</p> : null}
-        {loading ? <p>posting tweet...</p> : null}
+        {loading ? <p>Postear Hackinions</p> : null}
       </form>
     </>
   );
