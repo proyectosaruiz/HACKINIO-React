@@ -1,7 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function Fieldform({ type, name, id, change, htmlFor, text, value }) {
+function Fieldform({
+  type,
+  name,
+  id,
+  change,
+  htmlFor,
+  text,
+  value,
+  required = false,
+}) {
   return (
     <div>
       <label htmlFor={htmlFor}>{text}</label>
@@ -10,7 +19,7 @@ function Fieldform({ type, name, id, change, htmlFor, text, value }) {
         name={name}
         id={id}
         value={value}
-        required
+        required={required}
         onChange={change}
       />
     </div>
