@@ -5,6 +5,7 @@ import { useState, useContext } from "react";
 import { logInUserService } from "../../services/services";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
+import { ErrorMessage } from "../../components/ErrorMessage";
 
 //este es el codigo que tu hiciste, colocado donde yo creo que debe ir
 function Login() {
@@ -54,7 +55,7 @@ function Login() {
         ></Fieldform>
 
         <Button text="Enviar"></Button>
-        {error ? <p>{error}</p> : null}
+        {error ? <ErrorMessage message={error}></ErrorMessage> : null}
       </form>
     </main>
   );
