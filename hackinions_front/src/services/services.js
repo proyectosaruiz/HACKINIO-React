@@ -31,3 +31,33 @@ export const getMyDataService = async (token) => {
 
   return json.message[0];
 };
+
+export const registerUserService = async ({
+  username,
+  name,
+  last_name,
+  bio,
+  email,
+  password,
+}) => {
+  const response = await fetch(`${process.env.REACT_APP_BACKEND}/newUser`, {
+    method: "POST",
+    body: JSON.stringify({
+      username,
+      name,
+      last_name,
+      bio,
+      email,
+      password,
+    }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  const json = await response.json();
+
+  if (!response.ok) {
+    throw new Error(json.message);
+  }
+};

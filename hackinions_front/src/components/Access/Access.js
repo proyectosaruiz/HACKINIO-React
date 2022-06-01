@@ -17,7 +17,7 @@ function Access() {
   ) : (
     <>
       <Button click={() => navigate("/login")} text="Iniciar sesión"></Button>
-      <Button text="Registrate"></Button>
+      <Button click={() => navigate("/register")} text="Registrate"></Button>
     </>
   );
 }

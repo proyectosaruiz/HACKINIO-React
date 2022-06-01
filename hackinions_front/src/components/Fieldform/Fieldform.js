@@ -10,6 +10,7 @@ function Fieldform({
   text,
   value,
   required = false,
+  maxlength,
 }) {
   return (
     <div>
@@ -21,6 +22,7 @@ function Fieldform({
         value={value}
         required={required}
         onChange={change}
+        maxLength={maxlength}
       />
     </div>
   );
@@ -34,6 +36,7 @@ Fieldform.propTypes = {
   change: PropTypes.func,
   htmlFor: PropTypes.string,
   text: PropTypes.string,
+  maxlength: PropTypes.number,
 };
 
 export default Fieldform;
