@@ -6,6 +6,8 @@ import Login from "./views/Login/Login";
 import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
 
+import { HackinionsPage } from "./pages/HackinionsPage";
+
 function App() {
   return (
     <div className="App-container">
@@ -14,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Hackinions />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/Hackinions/:id" element={<HackinionsPage />} />
         </Routes>
         <Footer></Footer>
       </BrowserRouter>
