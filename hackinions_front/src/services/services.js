@@ -13,7 +13,7 @@ export const logInUserService = async ({ email, password }) => {
     throw new Error(json.message);
   }
 
-  return json.data;
+  return json.message;
 };
 
 export const getMyDataService = async (token) => {
@@ -29,5 +29,5 @@ export const getMyDataService = async (token) => {
     throw new Error(json.message);
   }
 
-  return json.data;
+  return json.message[0];
 };
