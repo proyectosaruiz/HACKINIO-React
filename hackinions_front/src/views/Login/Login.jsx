@@ -54,7 +54,10 @@ function Login() {
           change={(e) => setPassword(e.target.value)}
         ></Fieldform>
 
-        <Button text="Enviar"></Button>
+        <Button type="submit" primary={true}>
+          <p className="login-button-text">Enviar</p>
+        </Button>
+
         {error ? <ErrorMessage message={error}></ErrorMessage> : null}
       </form>
     </main>

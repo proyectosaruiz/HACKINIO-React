@@ -1,4 +1,4 @@
-input[type="text"],
+input[type="email"],
 input[type="password"] {
   height: 25px;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -43,4 +43,8 @@ input[type="submit"]:hover {
   flex-direction: column;
   gap: 8px;
   margin: 10px;
+}
+.login-button-text {
+  margin: 0;
+  font-size: 14px;
 }

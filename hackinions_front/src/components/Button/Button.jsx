@@ -1,29 +1,16 @@
-import PropTypes from "prop-types";
 import "./button.css";
 import React from "react";
 
-function Button({ href, click, text, disabled = false }) {
-  const Component = href ? "a" : "button";
+function Button({ children, onClick, type, primary, className }) {
   return (
-    <Component
-      href={href}
-      onClick={() => click && click()}
-      className="button"
-      to="/"
-      disabled={disabled}
+    <button
+      type={type}
+      onClick={onClick}
+      className={`${primary ? "button" : ""} ${className ? className : ""}`}
     >
-      {text}
-    </Component>
+      {children}
+    </button>
   );
 }
-
-Button.propTypes = {
-  click: PropTypes.func,
-  href: PropTypes.string,
-  withstyles: PropTypes.bool,
-  text: PropTypes.string.isRequired,
-  icon: PropTypes.string,
-  disabled: PropTypes.bool,
-};
 
 export default Button;
