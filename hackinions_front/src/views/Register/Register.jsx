@@ -5,7 +5,7 @@ import Fieldform from "../../components/Fieldform/Fieldform";
 import Button from "../../components/Button/Button";
 import { registerUserService } from "../../services/services";
 import { useNavigate } from "react-router-dom";
-
+import "./Register.css";
 function Register() {
   const navigate = useNavigate();
   const [userName, setUserName] = useState("");
@@ -42,7 +42,7 @@ function Register() {
         email,
         password,
       });
-      navigate("/login");
+      navigate("/");
     } catch (error) {
       setError(error.message);
     }
@@ -111,7 +111,9 @@ function Register() {
           change={(e) => setPassword(e.target.value)}
         ></Fieldform>
 
-        <Button text="Enviar"></Button>
+        <Button type="submit" primary={true}>
+          <p className="register-button-text">Enviar Registro</p>
+        </Button>
         {error ? <ErrorMessage message={error}></ErrorMessage> : null}
       </form>
     </main>

@@ -1,9 +1,12 @@
+:root {
+  --primary-color: #0f3b37;
+}
 .App-container {
   background-color: white;
   min-height: 100vh;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   /* display: grid;
   grid-template-areas:
     "header"
