@@ -14,7 +14,7 @@ function Access() {
   return (
     <div className="navbar-container">
       <div className="navbar-inner-container">
-        <p>Hackinions</p>
+        <p onClick={() => navigate("/")}>Hackinions</p>
         {!user && (
           <div className="navbar-access-container">
             <Link to={"/login"} className="navbar-link">
@@ -26,9 +26,14 @@ function Access() {
           </div>
         )}
         {user && (
-          <Button onClick={logOut} className="navbar-link">
-            Desconectar
-          </Button>
+          <div>
+            <Button onClick={logOut} className="navbar-link">
+              Desconectar
+            </Button>
+            <Link to={"/userInfo"} className="navbar-link">
+              Datos de {user.name}
+            </Link>
+          </div>
         )}
       </div>
     </div>

@@ -6,15 +6,16 @@ function Fieldform({
   name,
   id,
   change,
-  htmlFor,
-  text,
+  // htmlFor,
+  // text,
   value,
   required = false,
   maxlength,
+  placeholder,
 }) {
   return (
     <div>
-      <label htmlFor={htmlFor}>{text}</label>
+      {/* <label htmlFor={htmlFor}>{text}</label> */}
       <input
         type={type}
         name={name}
@@ -23,6 +24,7 @@ function Fieldform({
         required={required}
         onChange={change}
         maxLength={maxlength}
+        placeholder={placeholder}
       />
     </div>
   );
