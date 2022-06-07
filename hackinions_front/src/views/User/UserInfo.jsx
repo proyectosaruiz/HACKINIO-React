@@ -7,6 +7,7 @@ import "./UserInfo.css";
 import Fieldform from "../../components/Fieldform/Fieldform";
 import { ErrorMessage } from "../../components/ErrorMessage";
 import { editUserService } from "../../services/services";
+import { useNavigate } from "react-router-dom";
 
 const UserInfo = () => {
   const { token } = useContext(AuthContext);
@@ -18,6 +19,7 @@ const UserInfo = () => {
   const [bio, setBio] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
   const handleEditMode = () => {
     setEdit(true);
     setEmail(user.email || "");
@@ -58,7 +60,9 @@ const UserInfo = () => {
           <Button onClick={handleEditMode} primary={true}>
             Modificar datos
           </Button>
-          <Button primary={true}>Modificar contraseña</Button>
+          <Button onClick={() => navigate("/changePass")} primary={true}>
+            Modificar contraseña
+          </Button>
         </div>
       )}
       {edit && (
