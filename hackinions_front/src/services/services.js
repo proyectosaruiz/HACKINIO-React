@@ -87,3 +87,25 @@ export const editUserService = async (
     throw new Error(json.message);
   }
 };
+
+export const changePassService = async ({ password }, token) => {
+  const response = await fetch(
+    `${process.env.REACT_APP_BACKEND}/changePassword`,
+    {
+      method: "PUT",
+      body: JSON.stringify({
+        password,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: token,
+      },
+    }
+  );
+
+  const json = await response.json();
+
+  if (!response.ok) {
+    throw new Error(json.message);
+  }
+};

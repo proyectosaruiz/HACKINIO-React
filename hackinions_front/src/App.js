@@ -9,6 +9,7 @@ import Register from "./views/Register/Register";
 import Navbar from "./components/Navbar/Navbar";
 import Who from "./views/Who/Who";
 import UserInfo from "./views/User/UserInfo";
+import ChangePassword from "./views/changePassword/ChangePassword";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/who" element={<Who />} />
           <Route path="/userInfo" element={<UserInfo />} />
+          <Route path="/changePass" element={<ChangePassword />} />
         </Routes>
 
         <Footer></Footer>
