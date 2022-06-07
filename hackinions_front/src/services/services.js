@@ -61,3 +61,41 @@ export const registerUserService = async ({
     throw new Error(json.message);
   }
 };
+
+// export const getUserDataService = async (token) => {
+//   const response = await fetch(`${process.env.REACT_APP_BACKEND}/user/${id}`);
+
+//   const json = await response.json();
+
+//   if (!response.ok) {
+//     throw new Error(json.message);
+//   }
+
+//   return json.data;
+// };
+
+export const editUserService = async (
+  { username, name, last_name, bio, email },
+  token
+) => {
+  const response = await fetch(`${process.env.REACT_APP_BACKEND}/changeHack`, {
+    method: "PUT",
+    body: JSON.stringify({
+      username,
+      name,
+      last_name,
+      bio,
+      email,
+    }),
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: token,
+    },
+  });
+
+  const json = await response.json();
+
+  if (!response.ok) {
+    throw new Error(json.message);
+  }
+};

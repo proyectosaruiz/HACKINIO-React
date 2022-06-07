@@ -1,9 +1,7 @@
-.register-button-text {
-  margin: 0;
-  font-size: 14px;
+.userInfo-container {
+  color: black;
 }
-
-.App-main {
+.userInfo-edit-container {
   width: 300px;
   padding: 16px;
   border-radius: 10px;

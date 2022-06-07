@@ -1,11 +1,13 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { ErrorMessage } from "../../components/ErrorMessage";
 import Fieldform from "../../components/Fieldform/Fieldform";
 import Button from "../../components/Button/Button";
-import { registerUserService } from "../../services/services";
+import { registerUserService, logInUserService } from "../../services/services";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
 import "./Register.css";
+
 function Register() {
   const navigate = useNavigate();
   const [userName, setUserName] = useState("");
@@ -15,6 +17,7 @@ function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const { login } = useContext(AuthContext);
   //   const handleForm = async (e) => {
   //     // e.preventDefault();
   //     // try {
@@ -42,6 +45,9 @@ function Register() {
         email,
         password,
       });
+      const token = await logInUserService({ email, password });
+
+      login(token);
       navigate("/");
     } catch (error) {
       setError(error.message);
@@ -53,46 +59,44 @@ function Register() {
       {" "}
       <form onSubmit={handleForm}>
         <Fieldform
-          text="Apodo"
-          htmlFor=""
-          type="Name"
-          name="name"
-          id="name"
+          placeholder="Apodo"
+          type="Apodo"
+          name="Apodo"
+          id="apodo"
           value={userName}
           change={(e) => setUserName(e.target.value)}
+          maxlength="18"
         ></Fieldform>
 
         <Fieldform
-          text="Nombre"
-          htmlFor=""
+          placeholder="Nombre"
           type="Name"
           name="name"
           id="name"
           value={firstName}
           change={(e) => setFirstName(e.target.value)}
+          maxlength="18"
         ></Fieldform>
         <Fieldform
-          text="Apellido"
-          htmlFor=""
-          type="Name"
-          name="name"
-          id="name"
+          placeholder="Apellido"
+          type="LastName"
+          name="LastName"
+          id="LastName"
           value={lastName}
           change={(e) => setLastName(e.target.value)}
         ></Fieldform>
         <Fieldform
-          text="Biografía"
-          htmlFor=""
-          type="Name"
-          name="name"
-          id="name"
+          placeholder="Biografía"
+          type="Bio"
+          name="Bio"
+          id="Bio"
           value={bio}
           change={(e) => setBio(e.target.value)}
+          maxlength="250"
         ></Fieldform>
 
         <Fieldform
-          text="Email"
-          htmlFor="email"
+          placeholder="Email"
           type="email"
           name="email"
           id="email"
@@ -101,6 +105,7 @@ function Register() {
           change={(e) => setEmail(e.target.value)}
         ></Fieldform>
         <Fieldform
+          placeholder="Escribe tu contraseña"
           htmlFor="pass"
           type="password"
           text="Contraseña"
