@@ -31,7 +31,7 @@
 
 /* esto que esta comentado lo monte con el grid */
 
-.main {
+.App-main {
   color: black;
   grid-area: main;
 }

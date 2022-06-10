@@ -1,8 +1,7 @@
-import "normalize.css";
+// import "normalize.css";
 import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router";
-import Home from "./views/Hackinions/Home";
 import Login from "./views/Login/Login";
 import { Footer } from "./components/Footer/Footer";
 import Register from "./views/Register/Register";
@@ -10,6 +9,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Who from "./views/Who/Who";
 import UserInfo from "./views/User/UserInfo";
 import ChangePassword from "./views/changePassword/ChangePassword";
+import { Home } from "./views/Hackinions/Home";
 
 function App() {
   return (

@@ -16,7 +16,7 @@
   grid-template-rows: 5rem 1fr 3rem; */
 
   font-size: calc(10px + 2vmin);
-  color: white;
+  /* color: white; */
 }
 /* img {
   object-fit: cover;
