@@ -1,24 +1,23 @@
-import { createContext, useEffect, useState } from "react";
-import { getMyDataService } from "../services/services";
+import { createContext, useEffect, useState } from 'react';
+import { getMyDataService } from '../services/services';
 
 export const AuthContext = createContext(null);
 
 export const AuthContextProviderComponent = ({ children }) => {
-  const [token, setToken] = useState(localStorage.getItem("token"));
+  const [token, setToken] = useState(localStorage.getItem('token'));
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    localStorage.setItem("token", token);
+    localStorage.setItem('token', token);
   }, [token]);
 
   useEffect(() => {
     const getUserData = async () => {
       try {
         const data = await getMyDataService(token);
-
         setUser(data);
       } catch (error) {
-        setToken("");
+        setToken('');
         setUser(null);
       }
     };
@@ -27,7 +26,7 @@ export const AuthContextProviderComponent = ({ children }) => {
   }, [token, setToken]);
 
   const logout = () => {
-    setToken("");
+    setToken('');
     setUser(null);
   };
 

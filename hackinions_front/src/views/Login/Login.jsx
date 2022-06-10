@@ -5,6 +5,7 @@ import { useState, useContext } from "react";
 import { logInUserService } from "../../services/services";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
+import { ErrorMessage } from "../../components/ErrorMessage";
 
 //este es el codigo que tu hiciste, colocado donde yo creo que debe ir
 function Login() {
@@ -17,11 +18,10 @@ function Login() {
 
   const handleForm = async (e) => {
     e.preventDefault();
-
     try {
       const token = await logInUserService({ email, password });
-
       login(token);
+      console.log(token)
       navigate("/");
     } catch (error) {
       setError(error.message);
@@ -53,8 +53,11 @@ function Login() {
           change={(e) => setPassword(e.target.value)}
         ></Fieldform>
 
-        <Button text="Enviar"></Button>
-        {error ? <p>{error}</p> : null}
+        <Button type="submit" primary={true}>
+          <p className="login-button-text">Enviar</p>
+        </Button>
+
+        {error ? <ErrorMessage message={error}></ErrorMessage> : null}
       </form>
     </main>
   );
