@@ -1,10 +1,10 @@
-import { useContext, useState } from 'react';
-import { AuthContext } from '../../context/AuthContext';
-import { sendVoteService } from '../../services/services';
+import { useContext, useState } from "react";
+import { AuthContext } from "../../context/AuthContext";
+import { sendVoteService } from "../../services/services";
 
 export const NewVote = (props) => {
   const { token } = useContext(AuthContext);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const handleForm = async (ev) => {
     ev.preventDefault();
@@ -14,7 +14,6 @@ export const NewVote = (props) => {
     try {
       const vote = await sendVoteService(data, props.hack, token);
     } catch (error) {
-      console.log(error);
       setError(error.message);
     } finally {
     }
@@ -30,7 +29,7 @@ export const NewVote = (props) => {
           required
           onChange={handleForm}
         />
-        <label htmlFor="text">Good</label>
+        <label htmlFor="text">Me gusta</label>
         <input
           type="radio"
           name="vote"
@@ -39,7 +38,7 @@ export const NewVote = (props) => {
           required
           onChange={handleForm}
         />
-        <label htmlFor="text">Bad</label>
+        <label htmlFor="text">No me gusta</label>
         {error ? <p>{error}</p> : null}
       </form>
     </>

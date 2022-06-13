@@ -1,4 +1,5 @@
 //import useHackinions from "../hooks/useHackinions";
+import "./Home.css";
 import { useEffect, useState, useContext } from "react";
 import { HackinionList } from "../../components/Main/HackinionList";
 import { ErrorMessage } from "../../components/ErrorMessage";
@@ -9,7 +10,7 @@ import { getAllHacknionsService } from "../../services/services";
 export const Home = () => {
   const { user } = useContext(AuthContext);
   const [hackinions, setHackinions] = useState([]);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   useEffect(() => {
     const loadHackinions = async () => {
@@ -18,7 +19,7 @@ export const Home = () => {
         setHackinions(data);
       } catch (error) {
         setError(error.message);
-      } 
+      }
     };
     loadHackinions();
   }, []);
@@ -28,8 +29,8 @@ export const Home = () => {
   return (
     <section>
       {user ? <NewHackinion /> : null}
-      <h3>Ultimos Comentarios</h3>
-      <HackinionList hackinions={hackinions}  />
+      <h3>Ultimos hackinions</h3>
+      <HackinionList hackinions={hackinions} />
     </section>
   );
 };

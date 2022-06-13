@@ -1,37 +1,90 @@
-/* .App {
+input[type="text"],
+input[type="password"] {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+input {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+button[type="submit"] {
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  background: #01d28e;
+  border: 1px solid #01d28e;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+.login-form {
   background-color: white;
-  min-height: 100vh;
-  display: grid;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-  grid-template-rows: 5rem 1fr 3rem;
-
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.list-container {
+  display: flex;
 }
 
-.App-header {
-  background-color: #fdfd96;
-  grid-area: header;
-
-  color: black;
-
-  border-bottom: 2px black solid;
+.error {
+  color: red;
+  font-size: 12px;
 }
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.login-button-text {
+  margin: 0;
+  font-size: 14px;
+}
+.hack p {
+  margin: 5px;
+}
+.hack-li {
+  list-style-type: none;
+  border-radius: 10px;
+  border: 0.5px solid #181a19;
+  margin-top: 15px;
+}
+.list {
+  padding: 20px;
+}
+.delete {
+  cursor: pointer;
+  font-size: 15px;
+  background: red;
+  border: red;
+  border-radius: 50px;
+  color: #fff;
+  padding: 5px;
+}
+
 .App-main {
-  color: black;
-  grid-area: main;
+  font-size: 25px;
+  background-color: #1d6a63;
+  color: #f5f5f5;
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
+    1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2),
+    1px 30px 60px rgba(16, 16, 16, 0.4);
 }
-.App-footer {
-  color: black;
-  grid-area: footer;
-} */
 
-/* esto que esta comentado lo monte con el grid */
-
-.App-main {
-  color: black;
-  grid-area: main;
+.formulario {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-self: center;
+  justify-content: space-around;
+}
+.nuevohack {
+  text-align: center;
 }

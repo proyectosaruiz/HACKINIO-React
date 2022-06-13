@@ -1,20 +1,17 @@
-import { Hackinion } from './Hackinion';
+import { Hackinion } from "./Hackinion";
 
-export const HackinionList = ({ hackinions, removeHackinion }) => {
+export const HackinionList = ({ hackinions }) => {
   return hackinions ? (
     <ul className="list">
       {hackinions.map((hackinion) => {
         return (
-          <li key={hackinion.id}>
-            <Hackinion
-              hackinion={hackinion}
-              removeHackinion={removeHackinion}
-            />
+          <li key={hackinion.id} className="hack-li">
+            <Hackinion hackinion={hackinion} />
           </li>
         );
       })}
     </ul>
   ) : (
-    <p>No hay comentarios...</p>
+    <p>No hay Hackiniones...</p>
   );
 };

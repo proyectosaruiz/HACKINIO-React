@@ -1,10 +1,17 @@
 :root {
   --primary-color: #1d6a63;
+
   /* #0f3b37; */
+}
+
+@font-face {
+  font-family: "SecularOne-Regular";
+  src: url(font/Fascinate/Secular_One/SecularOne-Regular.ttf);
 }
 .App-container {
   background-color: white;
   min-height: 100vh;
+  font-family: "SecularOne-Regular";
   /* display: flex;
   justify-content: center;
   align-items: center; */

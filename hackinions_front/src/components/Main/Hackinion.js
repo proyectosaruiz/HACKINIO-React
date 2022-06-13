@@ -1,24 +1,36 @@
-import { Link, useNavigate } from 'react-router-dom';
-import { useContext, useState } from 'react';
-
-import { NewVote } from './NewVote';
-import { AuthContext } from '../../context/AuthContext';
+import { useContext } from "react";
+import { NewVote } from "./NewVote";
+import { AuthContext } from "../../context/AuthContext";
+import { deleteHackinionService } from "../../services/services";
 
 export const Hackinion = ({ hackinion }) => {
   const { token, user } = useContext(AuthContext);
-  const [error, setError] = useState('');
-
+  console.log(user, hackinion.userId);
+  const deleteHackinion = async (id) => {
+    try {
+      await deleteHackinionService({ id, token });
+    } catch (error) {}
+  };
   return (
-    <article className="">
-      <p>Titulo: {hackinion.title}</p>
-      <p>Comentario: {hackinion.content}</p>
-      <p> Autor: {hackinion.name}</p>
+    <article className="hack">
+      <p>Hackititle: {hackinion.title}</p>
+      <p>Hackinion: {hackinion.content}</p>
+      <p> Hackbosso: {hackinion.name}</p>e
       <p>Fecha: {new Date(hackinion.created_at).toLocaleString()}</p>
-      {user && user.id === hackinion.user_id ? (
+      {user && user.id === hackinion.userId ? (
         <section>
-          <NewVote hack={hackinion.hackId} />
+          <button
+            className="delete"
+            onClick={() => {
+              if (window.confirm("Esta seguro"))
+                deleteHackinion(hackinion.hackId);
+            }}
+          >
+            X
+          </button>
         </section>
       ) : null}
+      {user ? <NewVote hack={hackinion.hackId} /> : null}
     </article>
   );
 };

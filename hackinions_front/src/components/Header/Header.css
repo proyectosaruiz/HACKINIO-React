@@ -3,9 +3,11 @@
   width: 100vw;
   height: 5rem;
   background-color: #fdfd96;
-  position: absolute;
   top: 0;
   border-bottom: 2px black solid;
   display: flex;
   flex-direction: row;
+  position: absolute;
+  justify-content: space-around;
+  position: sticky;
 }
