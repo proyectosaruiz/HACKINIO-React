@@ -10,27 +10,38 @@ import { getAllHacknionsService } from "../../services/services";
 export const Home = () => {
   const { user } = useContext(AuthContext);
   const [hackinions, setHackinions] = useState([]);
-  const [error, setError] = useState("");
-
+  const [id, setId] = useState(0);
+  const [error, setError] = useState('');
   useEffect(() => {
     const loadHackinions = async () => {
       try {
         const data = await getAllHacknionsService();
+        console.log(data,id)
         setHackinions(data);
       } catch (error) {
         setError(error.message);
-      }
+      } 
     };
     loadHackinions();
-  }, []);
+  },[id]);
+  const addHack = () => {
+    setId(id+1);
+  };
 
+  const removeHack = () => {
+   /* setHackinions(hackinions.filter((hack) => hack.hackId !== id));*/
+   setId(id+1)
+  };
   if (error) return <ErrorMessage message={error} />;
 
   return (
-    <section>
-      {user ? <NewHackinion /> : null}
-      <h3>Ultimos hackinions</h3>
-      <HackinionList hackinions={hackinions} />
+    <section className="">
+      {user ? <NewHackinion addHack={addHack}  /> : null}
+      <section className="hackList">
+      <h3>Ultimos Comentarios</h3>
+      <HackinionList hackinions={hackinions} removeHack={removeHack}  />
+
+      </section>
     </section>
   );
 };

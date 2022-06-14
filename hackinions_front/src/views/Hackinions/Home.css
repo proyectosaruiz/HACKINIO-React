@@ -2,14 +2,6 @@ input[type="text"],
 input[type="password"] {
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
-
-input {
-  margin-top: 5px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-}
 button[type="submit"] {
   margin-top: 10px;
   cursor: pointer;
@@ -19,7 +11,9 @@ button[type="submit"] {
   color: #fff;
   padding: 10px 20px;
 }
-
+input[type="submit"]:hover {
+  background: #6cf0c2;
+}
 .button-container {
   display: flex;
   justify-content: center;
@@ -42,49 +36,38 @@ button[type="submit"] {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin: 10px;
 }
 .login-button-text {
   margin: 0;
   font-size: 14px;
 }
-.hack p {
+.hackList{
+  width: 50%;
+  margin: auto;
+}
+.hack p{
   margin: 5px;
 }
-.hack-li {
-  list-style-type: none;
+.hack-li{
+  font-family: 12px;
+  list-style-type:none;
   border-radius: 10px;
-  border: 0.5px solid #181a19;
+  border: 0.5px solid #01d28e;
   margin-top: 15px;
 }
-.list {
+.list{
   padding: 20px;
 }
-.delete {
+.delete{
   cursor: pointer;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
   font-size: 15px;
   background: red;
   border: red;
-  border-radius: 50px;
+  border-radius: 50%;
   color: #fff;
-  padding: 5px;
-}
-
-.App-main {
-  font-size: 25px;
-  background-color: #1d6a63;
-  color: #f5f5f5;
-  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
-    1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2),
-    1px 30px 60px rgba(16, 16, 16, 0.4);
-}
-
-.formulario {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-self: center;
-  justify-content: space-around;
-}
-.nuevohack {
-  text-align: center;
+  padding: 0;
 }
