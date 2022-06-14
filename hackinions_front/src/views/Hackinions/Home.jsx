@@ -11,36 +11,35 @@ export const Home = () => {
   const { user } = useContext(AuthContext);
   const [hackinions, setHackinions] = useState([]);
   const [id, setId] = useState(0);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   useEffect(() => {
     const loadHackinions = async () => {
       try {
         const data = await getAllHacknionsService();
-        console.log(data,id)
+        console.log(data, id);
         setHackinions(data);
       } catch (error) {
         setError(error.message);
-      } 
+      }
     };
     loadHackinions();
-  },[id]);
+  }, [id]);
   const addHack = () => {
-    setId(id+1);
+    setId(id + 1);
   };
 
   const removeHack = () => {
-   /* setHackinions(hackinions.filter((hack) => hack.hackId !== id));*/
-   setId(id+1)
+    /* setHackinions(hackinions.filter((hack) => hack.hackId !== id));*/
+    setId(id + 1);
   };
   if (error) return <ErrorMessage message={error} />;
 
   return (
     <section className="">
-      {user ? <NewHackinion addHack={addHack}  /> : null}
+      {user ? <NewHackinion addHack={addHack} /> : null}
       <section className="hackList">
-      <h3>Ultimos Comentarios</h3>
-      <HackinionList hackinions={hackinions} removeHack={removeHack}  />
-
+        <h3>Ultimos Hackinions</h3>
+        <HackinionList hackinions={hackinions} removeHack={removeHack} />
       </section>
     </section>
   );

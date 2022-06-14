@@ -1,4 +1,4 @@
-import { Hackinion } from './Hackinion';
+import { Hackinion } from "./Hackinion";
 
 export const HackinionList = ({ hackinions, removeHack }) => {
   return hackinions ? (
@@ -12,6 +12,6 @@ export const HackinionList = ({ hackinions, removeHack }) => {
       })}
     </ul>
   ) : (
-    <p>No hay comentarios...</p>
+    <p>No hay Hackinion</p>
   );
 };

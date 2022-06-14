@@ -1,6 +1,34 @@
-input[type="text"],
+input[type="text"] {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-self: center;
+  align-content: center;
+  margin-top: 10px;
+  font-family: "SecularOne-Regular";
+  width: 90%;
+  padding: 20px;
+  font-size: 25px;
+}
+
+.App-main {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-self: center;
+  justify-content: space-around;
+}
 input[type="password"] {
   border: 1px solid rgba(0, 0, 0, 0.2);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-self: center;
+  align-content: center;
+  justify-content: space-around;
 }
 button[type="submit"] {
   margin-top: 10px;
@@ -8,8 +36,19 @@ button[type="submit"] {
   font-size: 15px;
   background: #01d28e;
   border: 1px solid #01d28e;
+  border-radius: 8px;
   color: #fff;
   padding: 10px 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: ease 2s;
+  font-size: 25px;
+  font-family: "SecularOne-Regular";
+}
+
+button[type="submit"]:hover {
+  transition: ease 1s;
+  background: grey;
+  width: 103%;
 }
 input[type="submit"]:hover {
   background: #6cf0c2;
@@ -42,24 +81,24 @@ input[type="submit"]:hover {
   margin: 0;
   font-size: 14px;
 }
-.hackList{
+.hackList {
   width: 50%;
   margin: auto;
 }
-.hack p{
+.hack p {
   margin: 5px;
 }
-.hack-li{
+.hack-li {
   font-family: 12px;
-  list-style-type:none;
+  list-style-type: none;
   border-radius: 10px;
   border: 0.5px solid #01d28e;
   margin-top: 15px;
 }
-.list{
+.list {
   padding: 20px;
 }
-.delete{
+.delete {
   cursor: pointer;
   width: 20px;
   height: 20px;
@@ -70,4 +109,18 @@ input[type="submit"]:hover {
   border-radius: 50%;
   color: #fff;
   padding: 0;
+}
+h3 {
+  font-size: 30px;
+  color: #0a0a0a;
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
+    1px 4px 1px #919191, 1px 5px 1px #919191;
+}
+
+.titulohack {
+  text-align: center;
+  font-size: 35px;
+  color: #f5f5f5;
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
+    1px 4px 1px #919191, 1px 5px 1px #919191;
 }
