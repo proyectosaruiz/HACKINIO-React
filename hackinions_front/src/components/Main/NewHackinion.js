@@ -1,10 +1,13 @@
-import { useContext, useState } from "react";
-import { AuthContext } from "../../context/AuthContext";
-import { sendHackinionService } from "../../services/services";
+import { useContext, useState } from 'react';
+import { AuthContext } from '../../context/AuthContext';
+import { sendHackinionService } from '../../services/services';
+
+import Button from '../../components/Button/Button';
+import Fieldform from '../../components/Fieldform/Fieldform';
 
 export const NewHackinion = ({ addHack, id }) => {
   const { token } = useContext(AuthContext);
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
   const [data, setData] = useState({});
 
   const handeInput = (ev) => {
@@ -32,29 +35,32 @@ export const NewHackinion = ({ addHack, id }) => {
       <main className="App-main">
         <p className="titulohack">Nuevo Hackinion</p>
         <form className="">
-          <div>
-            <input
-              type="text"
-              name="titulo"
-              id="title"
-              required
-              onChange={handeInput}
-              placeholder="Titulo"
-            />
-          </div>
-          <div>
-            <input
-              type="text"
-              name="contentido"
-              id="content"
-              required
-              onChange={handeInput}
-              placeholder="Comentario"
-            />
-          </div>
-          <button type="submit" onClick={handleForm}>
+          <Fieldform
+            htmlFor="title"
+            type="text"
+            name="title"
+            id="title"
+            value={data.title}
+            required={true}
+            change={handeInput}
+            placeholder="Title"
+          />
+          <Fieldform
+            htmlFor="content"
+            type="text"
+            name="content"
+            id="content"
+            value={data.content}
+            required={true}
+            change={handeInput}
+            placeholder="Content"
+          />
+          <Button type="submit" primary={true} onClick={handleForm}>
+            <p className="login-button-text"> Enviar Hackinion</p>
+          </Button>
+          {/*<button type="submit" onClick={handleForm}>
             Enviar Hackinion
-          </button>
+          </button>*/}
           {error ? <p>{error}</p> : null}
         </form>
       </main>

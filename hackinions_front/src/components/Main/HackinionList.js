@@ -1,4 +1,4 @@
-import { Hackinion } from "./Hackinion";
+import { Hackinion } from './Hackinion';
 
 export const HackinionList = ({ hackinions, removeHack }) => {
   return hackinions ? (

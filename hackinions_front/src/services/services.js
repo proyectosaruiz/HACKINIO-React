@@ -127,6 +127,7 @@ export const deleteHackinionService = async ({ id, token }) => {
   if (!response.ok) {
     throw new Error(json.message);
   }
+  return json;
 };
 //crea un nuevo comentario en la DB
 export const sendHackinionService = async (data, token) => {

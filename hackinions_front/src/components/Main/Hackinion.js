@@ -1,14 +1,17 @@
-import { useContext } from "react";
-import { NewVote } from "./NewVote";
-import { AuthContext } from "../../context/AuthContext";
-import { deleteHackinionService } from "../../services/services";
+import { useContext } from 'react';
+import { NewVote } from './NewVote';
+import { AuthContext } from '../../context/AuthContext';
+import { deleteHackinionService } from '../../services/services';
 
 export const Hackinion = ({ hackinion, removeHack }) => {
   const { token, user } = useContext(AuthContext);
   const deleteHackinion = async (id) => {
     try {
-      removeHack();
-      await deleteHackinionService({ id, token });
+      const hackinion = await deleteHackinionService({ id, token });
+      if (hackinion) {
+        console.log('entra en el if');
+        removeHack();
+      }
     } catch (error) {}
   };
   return (
@@ -22,7 +25,7 @@ export const Hackinion = ({ hackinion, removeHack }) => {
           <button
             className="delete"
             onClick={() => {
-              if (window.confirm("Esta seguro"))
+              if (window.confirm('Esta seguro'))
                 deleteHackinion(hackinion.hackId);
             }}
           >
