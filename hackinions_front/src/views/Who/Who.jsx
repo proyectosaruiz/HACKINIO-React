@@ -12,9 +12,60 @@ function Who() {
         ad magnam soluta cumque eveniet quidem dolore eius veritatis, deleniti
         quod?
       </p>
-      <div>
-        <img src={amilcar} alt=""></img>
-        <img src={miguel} alt=""></img>
+      <div className="Who-img">
+        <aside class="profile-card">
+          <header>
+            <a target="_blank" href="#">
+              <img className="Who-imgAmi" src={amilcar} alt=""></img>
+            </a>
+
+            <h1>John Doe</h1>
+
+            <h2>Better Visuals</h2>
+          </header>
+
+          <div class="profile-bio">
+            <p>
+              It takes monumental improvement for us to change how we live our
+              lives. Design is the way we access that improvement.
+            </p>
+          </div>
+
+          {/* <ul class="profile-social-links">
+            <li>
+              <a target="_blank" href="https://github.com/vipulsaxena">
+                <i class="fa fa-github"></i>
+              </a>
+            </li>
+          </ul> */}
+        </aside>
+
+        <aside class="profile-card">
+          <header>
+            <a target="_blank" href="#">
+              <img className="Who-imgMig" src={miguel} alt=""></img>
+            </a>
+
+            <h1>John Doe</h1>
+
+            <h2>Better Visuals</h2>
+          </header>
+
+          <div class="profile-bio">
+            <p>
+              It takes monumental improvement for us to change how we live our
+              lives. Design is the way we access that improvement.
+            </p>
+          </div>
+
+          {/* <ul class="profile-social-links">
+            <li>
+              <a target="_blank" href="https://github.com/vipulsaxena">
+                <i class="fa fa-github"></i>
+              </a>
+            </li>
+          </ul> */}
+        </aside>
       </div>
     </div>
   );

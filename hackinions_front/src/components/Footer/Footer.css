@@ -1,16 +1,16 @@
-/* .App-footer {
+.App-footer {
   bottom: 0;
-  position: absolute;
+  /* position: absolute; */
   max-height: 50px;
   width: 100%;
   background-color: var(--primary-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
-} */
-/* .App-footer p {
+}
+.App-footer p {
   margin-block-start: 0em;
   margin-block-end: 0em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-} */
+}

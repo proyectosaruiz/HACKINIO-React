@@ -18,10 +18,10 @@ function Access() {
         {!user && (
           <div className="navbar-access-container">
             <Link to={"/login"} className="navbar-link">
-              Login
+              Acceder
             </Link>
             <Link to={"/register"} className="navbar-link">
-              Register
+              Regístrate
             </Link>
           </div>
         )}

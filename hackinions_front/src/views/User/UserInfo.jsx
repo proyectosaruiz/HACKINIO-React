@@ -51,18 +51,24 @@ const UserInfo = () => {
   return (
     <div>
       {!edit && (
-        <div className="userInfo-container">
-          <p>Apodo: {user.username}</p>
-          <p>Nombre: {user.name}</p>
-          <p>Apellido: {user.last_name}</p>
-          <p>Biografía: {user.bio}</p>
-          <p>Correo electrònico: {user.email}</p>
-          <Button onClick={handleEditMode} primary={true}>
-            Modificar datos
-          </Button>
-          <Button onClick={() => navigate("/changePass")} primary={true}>
-            Modificar contraseña
-          </Button>
+        <div className="userInfo-container-target">
+          <div className="userInfo-container">
+            <div className="userInfo-p">
+              <p>Apodo: {user.username}</p>
+              <p>Nombre: {user.name}</p>
+              <p>Apellido: {user.last_name}</p>
+              <p>Biografía: {user.bio}</p>
+              <p>Correo electrònico: {user.email}</p>
+            </div>
+            <div className="userInfo-button">
+              <Button onClick={handleEditMode} primary={true}>
+                Modificar datos
+              </Button>
+              <Button onClick={() => navigate("/changePass")} primary={true}>
+                Modificar contraseña
+              </Button>
+            </div>
+          </div>
         </div>
       )}
       {edit && (
