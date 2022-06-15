@@ -1,6 +1,6 @@
 .App-footer {
   bottom: 0;
-  /* position: absolute; */
+  position: relative;
   max-height: 50px;
   width: 100%;
   background-color: var(--primary-color);
@@ -13,4 +13,15 @@
   margin-block-end: 0em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+}
+.footer-link {
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  margin-right: 32px;
+}
+.footer-link:hover {
+  text-decoration: underline;
 }

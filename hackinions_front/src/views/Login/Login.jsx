@@ -30,10 +30,11 @@ function Login() {
   };
 
   return (
-    <main className="App-main">
+    <main className="login-main">
       {" "}
       <form onSubmit={handleForm}>
         <Fieldform
+          placeholder="Introduce tu apodo"
           text="Email"
           htmlFor="email"
           type="email"
@@ -44,6 +45,7 @@ function Login() {
           change={(e) => setEmail(e.target.value)}
         ></Fieldform>
         <Fieldform
+          placeholder="Introduce tu contraseña"
           htmlFor="pass"
           type="password"
           text="Contraseña"

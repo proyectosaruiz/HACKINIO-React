@@ -3,7 +3,7 @@
   font-size: 14px;
 }
 
-.App-main {
+.register-main {
   width: 300px;
   padding: 16px;
   border-radius: 10px;
@@ -31,4 +31,7 @@ form input[type="Bio"] {
   border-radius: 3px;
   background-color: #f6f6f6;
   margin: 8px 0;
+  resize: none;
+  overflow: scroll;
+  vertical-align: bottom;
 }

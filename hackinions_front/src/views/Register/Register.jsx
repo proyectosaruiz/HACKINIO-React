@@ -55,7 +55,7 @@ function Register() {
   };
 
   return (
-    <main className="App-main">
+    <main className="register-main">
       {" "}
       <form onSubmit={handleForm}>
         <Fieldform
