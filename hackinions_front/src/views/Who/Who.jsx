@@ -7,14 +7,66 @@ function Who() {
     <div className="Who">
       <header className="Who">Nos presentamos</header>
       <p className="Who-p">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. A officia
-        voluptate totam blanditiis recusandae consequatur quia itaque autem iure
-        ad magnam soluta cumque eveniet quidem dolore eius veritatis, deleniti
-        quod?
+        Este es el primer proyecto web creado por nosotros, Amilcar Ruiz y
+        Miguel Alonso. Los dos somos dos "jóvenes" reciclados al flamante y
+        apasionante mundo de la programación. Esta página estará en constante
+        mejora y perfeccionamiento con el fin de perfeccionar nuestras
+        habilidades.
       </p>
-      <div>
-        <img src={amilcar} alt=""></img>
-        <img src={miguel} alt=""></img>
+      <div className="Who-img">
+        <aside class="profile-card">
+          <header>
+            <a target="_blank" href="#">
+              <img className="Who-imgAmi" src={amilcar} alt=""></img>
+            </a>
+
+            <h1>John Doe</h1>
+
+            <h2>Better Visuals</h2>
+          </header>
+
+          <div class="profile-bio">
+            <p>
+              It takes monumental improvement for us to change how we live our
+              lives. Design is the way we access that improvement.
+            </p>
+          </div>
+
+          {/* <ul class="profile-social-links">
+            <li>
+              <a target="_blank" href="https://github.com/vipulsaxena">
+                <i class="fa fa-github"></i>
+              </a>
+            </li>
+          </ul> */}
+        </aside>
+
+        <aside class="profile-card">
+          <header>
+            <a target="_blank" href="#">
+              <img className="Who-imgMig" src={miguel} alt=""></img>
+            </a>
+
+            <h1 className="who-h1">Miguel Alonso</h1>
+
+            <h2 className="who-h2">Desarrollador</h2>
+          </header>
+
+          <div class="profile-bio">
+            <p>
+              It takes monumental improvement for us to change how we live our
+              lives. Design is the way we access that improvement.
+            </p>
+          </div>
+
+          {/* <ul class="profile-social-links">
+            <li>
+              <a target="_blank" href="https://github.com/vipulsaxena">
+                <i class="fa fa-github"></i>
+              </a>
+            </li>
+          </ul> */}
+        </aside>
       </div>
     </div>
   );

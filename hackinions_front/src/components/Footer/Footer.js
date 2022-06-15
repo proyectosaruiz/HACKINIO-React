@@ -8,7 +8,7 @@ export const Footer = () => {
       {/* <img src={logo} /> */}
 
       <p>© 2022 HACK A BOSS</p>
-      <Link to={"/who"} className="navbar-link">
+      <Link to={"/who"} className="footer-link">
         ¿Quienes somos?
       </Link>
     </div>

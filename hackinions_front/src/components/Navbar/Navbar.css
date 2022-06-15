@@ -23,7 +23,8 @@
   text-decoration: none;
   background-color: transparent;
   border: none;
-  font-size: 16px;
+  font-size: 24px;
+  margin-left: 32px;
 }
 .navbar-link:hover {
   text-decoration: underline;

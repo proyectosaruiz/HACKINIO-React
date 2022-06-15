@@ -2,7 +2,13 @@ input[type="email"],
 input[type="password"] {
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
-
+.login-main {
+  width: 300px;
+  padding: 16px;
+  border-radius: 10px;
+  margin: 64px auto;
+  background-color: #ccc;
+}
 input[type="submit"] {
   margin-top: 10px;
   cursor: pointer;

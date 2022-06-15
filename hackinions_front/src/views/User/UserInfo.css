@@ -1,5 +1,13 @@
 .userInfo-container {
-  color: black;
+  width: 500px;
+  border: 3px solid var(--primary-color);
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.userInfo-container-target {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
 }
 .userInfo-edit-container {
   width: 300px;
@@ -7,6 +15,14 @@
   border-radius: 10px;
   margin: 64px auto;
   background-color: #ccc;
+}
+.userInfo-button {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+.userInfo-p {
+  margin: 12px;
 }
 form input[type="Apodo"],
 form input[type="Name"],
