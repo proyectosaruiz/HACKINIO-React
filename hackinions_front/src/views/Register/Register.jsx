@@ -58,6 +58,8 @@ function Register() {
     <main className="register-main">
       {" "}
       <form onSubmit={handleForm}>
+        <p className="titulohack">Datos de registro</p>
+
         <Fieldform
           placeholder="Apodo"
           type="Apodo"
@@ -117,7 +119,7 @@ function Register() {
         ></Fieldform>
 
         <Button type="submit" primary={true}>
-          <p className="register-button-text">Enviar Registro</p>
+          <p className="button-text">Enviar Registro</p>
         </Button>
         {error ? <ErrorMessage message={error}></ErrorMessage> : null}
       </form>

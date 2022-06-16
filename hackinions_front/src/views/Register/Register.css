@@ -1,14 +1,10 @@
-.register-button-text {
-  margin: 0;
-  font-size: 14px;
-}
-
 .register-main {
   width: 300px;
   padding: 16px;
   border-radius: 10px;
   margin: 64px auto;
-  background-color: #ccc;
+  background-color: var(--secondary-color);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 form input[type="Apodo"],
 form input[type="Name"],
@@ -16,12 +12,12 @@ form input[type="LastName"],
 form input[type="email"],
 form input[type="password"] {
   width: 100%;
-  /* padding: 3px 10px; */
   border: 1px solid #f6f6f6;
   border-radius: 3px;
   background-color: #f6f6f6;
   margin: 8px 0;
   display: inline-block;
+  font-size: 18px;
 }
 
 form input[type="Bio"] {
@@ -34,4 +30,10 @@ form input[type="Bio"] {
   resize: none;
   overflow: scroll;
   vertical-align: bottom;
+  font-size: 18px;
+}
+@media screen and (max-width: 300px) {
+  .register-main {
+    width: 90%;
+  }
 }

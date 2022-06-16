@@ -7,6 +7,7 @@ import { ErrorMessage } from "../../components/ErrorMessage";
 import Fieldform from "../../components/Fieldform/Fieldform";
 import { changePassService } from "../../services/services";
 import { Link } from "react-router-dom";
+import "./changePassword.css";
 
 const ChangePassword = () => {
   const { token } = useContext(AuthContext);
@@ -33,10 +34,11 @@ const ChangePassword = () => {
   };
 
   return (
-    <main className="App-main">
+    <main className="change-password-main">
       {" "}
       {!save && (
         <form onSubmit={handleForm}>
+          <p className="titulohack">Modificar contraseña</p>
           <Fieldform
             placeholder="Nueva contraseña"
             type="password"
@@ -58,7 +60,7 @@ const ChangePassword = () => {
           ></Fieldform>
 
           <Button type="submit" primary={true}>
-            <p className="login-button-text">Modificar contraseña</p>
+            <p className="button-text">Modificar contraseña</p>
           </Button>
 
           {error ? <ErrorMessage message={error}></ErrorMessage> : null}

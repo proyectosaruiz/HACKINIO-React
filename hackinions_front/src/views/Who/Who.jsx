@@ -16,9 +16,9 @@ function Who() {
       <div className="Who-img">
         <aside class="profile-card">
           <header>
-            <a target="_blank" href="#">
+            <p>
               <img className="Who-imgAmi" src={amilcar} alt=""></img>
-            </a>
+            </p>
 
             <h1>John Doe</h1>
 
@@ -43,9 +43,9 @@ function Who() {
 
         <aside class="profile-card">
           <header>
-            <a target="_blank" href="#">
+            <p>
               <img className="Who-imgMig" src={miguel} alt=""></img>
-            </a>
+            </p>
 
             <h1 className="who-h1">Miguel Alonso</h1>
 

@@ -33,6 +33,7 @@ function Login() {
     <main className="login-main">
       {" "}
       <form onSubmit={handleForm}>
+        <p className="titulohack">Iniciar sesión</p>
         <Fieldform
           placeholder="Introduce tu apodo"
           text="Email"
@@ -57,7 +58,7 @@ function Login() {
         ></Fieldform>
 
         <Button type="submit" primary={true}>
-          <p className="login-button-text">Enviar</p>
+          <p className="button-text">Enviar</p>
         </Button>
 
         {error ? <ErrorMessage message={error}></ErrorMessage> : null}

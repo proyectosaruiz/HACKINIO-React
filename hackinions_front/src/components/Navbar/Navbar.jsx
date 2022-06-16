@@ -26,7 +26,7 @@ function Access() {
           </div>
         )}
         {user && (
-          <div>
+          <div className="navbar-access-container">
             <Button onClick={logOut} className="navbar-link">
               Desconectar
             </Button>

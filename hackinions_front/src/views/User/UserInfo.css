@@ -46,3 +46,19 @@ form input[type="Bio"] {
   background-color: #f6f6f6;
   margin: 8px 0;
 }
+
+@media screen and (max-width: 600px) {
+  .userInfo-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 16px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .userInfo-container-target,
+  .userInfo-edit-container {
+    width: 90%;
+  }
+}
