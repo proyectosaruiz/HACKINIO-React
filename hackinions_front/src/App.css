@@ -1,6 +1,7 @@
 :root {
   --primary-color: #1d6a63;
   --secondary-color: #ccc;
+  background-color: rgb(235, 235, 235);
   /* #0f3b37; */
 }
 
@@ -9,7 +10,6 @@
   src: url(font/Fascinate/Secular_One/SecularOne-Regular.ttf);
 }
 .App-container {
-  background-color: rgb(235, 235, 235);
   min-height: 100vh;
   font-family: "SecularOne-Regular";
   font-size: calc(10px + 2vmin);

@@ -3,19 +3,14 @@
   border: 3px solid var(--primary-color);
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 128px auto;
 }
 .userInfo-container-target {
   display: flex;
   justify-content: center;
   margin: 10px;
 }
-.userInfo-edit-container {
-  width: 300px;
-  padding: 16px;
-  border-radius: 10px;
-  margin: 64px auto;
-  background-color: #ccc;
-}
+
 .userInfo-button {
   display: flex;
   justify-content: space-around;
@@ -23,28 +18,7 @@
 }
 .userInfo-p {
   margin: 12px;
-}
-form input[type="Apodo"],
-form input[type="Name"],
-form input[type="LastName"],
-form input[type="email"],
-form input[type="password"] {
-  width: 100%;
-  /* padding: 3px 10px; */
-  border: 1px solid #f6f6f6;
-  border-radius: 3px;
-  background-color: #f6f6f6;
-  margin: 8px 0;
-  display: inline-block;
-}
-
-form input[type="Bio"] {
-  width: 100%;
-  height: 300px;
-  border: 1px solid #f6f6f6;
-  border-radius: 3px;
-  background-color: #f6f6f6;
-  margin: 8px 0;
+  word-break: break-word;
 }
 
 @media screen and (max-width: 600px) {
@@ -57,8 +31,7 @@ form input[type="Bio"] {
 }
 
 @media screen and (max-width: 300px) {
-  .userInfo-container-target,
-  .userInfo-edit-container {
+  .userInfo-container-target {
     width: 90%;
   }
 }

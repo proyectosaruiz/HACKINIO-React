@@ -1,17 +1,23 @@
 .Who {
   color: black;
   margin: 32px;
-}
-header {
   font-size: 24px;
 }
-.Who-p {
-  font-size: 16px;
+header h1 {
+  font-size: 24px;
 }
-/* .Who-img {
+header h2 {
+  font-size: 32px;
+  text-align: center;
+}
+.Who-p {
+  margin: 68px;
+  font-size: 18px;
+}
+.Who-img {
   display: flex;
   justify-content: space-around;
-} */
+}
 .Who-img {
   display: flex;
   justify-content: space-around;
@@ -31,4 +37,9 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.profile-bio {
+  margin: 5px;
+  text-align: center;
+  font-size: 18px;
 }

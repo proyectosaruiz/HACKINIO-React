@@ -10,6 +10,7 @@ import Who from "./views/Who/Who";
 import UserInfo from "./views/User/UserInfo";
 import ChangePassword from "./views/changePassword/ChangePassword";
 import { Home } from "./views/Hackinions/Home";
+import ChangeUserData from "./views/ChangeUserData/ChangeUserData";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/who" element={<Who />} />
           <Route path="/userInfo" element={<UserInfo />} />
           <Route path="/changePass" element={<ChangePassword />} />
+          <Route path="/changeUserData" element={<ChangeUserData />} />
         </Routes>
 
         <Footer></Footer>
