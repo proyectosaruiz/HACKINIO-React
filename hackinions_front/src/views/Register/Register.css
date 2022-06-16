@@ -18,6 +18,7 @@ form input[type="password"] {
   margin: 8px 0;
   display: inline-block;
   font-size: 18px;
+  font-family: "SecularOne-Regular";
 }
 
 form textarea[type="Bio"] {
@@ -30,6 +31,7 @@ form textarea[type="Bio"] {
   vertical-align: bottom;
   font-size: 18px;
   resize: vertical;
+  font-family: "SecularOne-Regular";
 }
 @media screen and (max-width: 300px) {
   .register-main {

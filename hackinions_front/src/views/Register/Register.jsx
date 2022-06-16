@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useContext } from "react";
-import { ErrorMessage } from "../../components/ErrorMessage";
+import { ErrorMessage } from "../../components/Error/ErrorMessage";
 import Fieldform from "../../components/Fieldform/Fieldform";
 import Button from "../../components/Button/Button";
 import { registerUserService, logInUserService } from "../../services/services";

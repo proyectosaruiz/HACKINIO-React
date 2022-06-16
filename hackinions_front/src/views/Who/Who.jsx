@@ -55,8 +55,9 @@ function Who() {
 
           <div class="profile-bio">
             <p>
-              It takes monumental improvement for us to change how we live our
-              lives. Design is the way we access that improvement.
+              Con don de gentes y gran capacidad de gestión de trabajo y tiempo.
+              Educación, proactividad y compromiso con el cliente y la empresa
+              como valores fundamentales en mi carrera.
             </p>
           </div>
 

@@ -7,6 +7,7 @@ input[name="title"] {
   margin: 8px 0;
   display: inline-block;
   font-size: 18px;
+  font-family: "SecularOne-Regular";
 }
 
 textarea[name="content"] {

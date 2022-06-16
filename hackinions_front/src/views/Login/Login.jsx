@@ -5,7 +5,7 @@ import { useState, useContext } from "react";
 import { logInUserService } from "../../services/services";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
-import { ErrorMessage } from "../../components/ErrorMessage";
+import { ErrorMessage } from "../../components/Error/ErrorMessage";
 
 //este es el codigo que tu hiciste, colocado donde yo creo que debe ir
 function Login() {

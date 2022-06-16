@@ -4,7 +4,7 @@ import { sendHackinionService } from "../../services/services";
 
 import Button from "../../components/Button/Button";
 import Fieldform from "../../components/Fieldform/Fieldform";
-import { ErrorMessage } from "../ErrorMessage";
+import { ErrorMessage } from "../Error/ErrorMessage";
 
 export const NewHackinion = ({ addHack, id }) => {
   const { token } = useContext(AuthContext);
@@ -25,6 +25,7 @@ export const NewHackinion = ({ addHack, id }) => {
       }
 
       addHack(hackinion);
+      setData({ ...data, title: "", content: "" });
     } catch (error) {
       console.log(error);
       setError(error.message);
