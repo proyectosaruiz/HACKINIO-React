@@ -2,7 +2,7 @@
 import "./Home.css";
 import { useEffect, useState, useContext } from "react";
 import { HackinionList } from "../../components/Main/HackinionList";
-import { ErrorMessage } from "../../components/ErrorMessage";
+import { ErrorMessage } from "../../components/Error/ErrorMessage";
 import { NewHackinion } from "../../components/Main/NewHackinion";
 import { AuthContext } from "../../context/AuthContext";
 import { getAllHacknionsService } from "../../services/services";

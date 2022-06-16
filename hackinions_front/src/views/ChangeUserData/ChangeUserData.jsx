@@ -5,7 +5,7 @@ import { AuthContext } from "../../context/AuthContext";
 import useUser from "../../hooks/useUser";
 import "./ChangeUserData.css";
 import Fieldform from "../../components/Fieldform/Fieldform";
-import { ErrorMessage } from "../../components/ErrorMessage";
+import { ErrorMessage } from "../../components/Error/ErrorMessage";
 import { editUserService } from "../../services/services";
 import { useNavigate } from "react-router-dom";
 

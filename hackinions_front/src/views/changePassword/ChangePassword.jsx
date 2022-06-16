@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import Button from "../../components/Button/Button";
-import { ErrorMessage } from "../../components/ErrorMessage";
+import { ErrorMessage } from "../../components/Error/ErrorMessage";
 import Fieldform from "../../components/Fieldform/Fieldform";
 import { changePassService } from "../../services/services";
 import { Link } from "react-router-dom";

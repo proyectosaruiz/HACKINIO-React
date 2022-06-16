@@ -18,10 +18,6 @@ header h2 {
   display: flex;
   justify-content: space-around;
 }
-.Who-img {
-  display: flex;
-  justify-content: space-around;
-}
 
 .Who-imgMig {
   display: flex;
@@ -42,4 +38,13 @@ header h2 {
   margin: 5px;
   text-align: center;
   font-size: 18px;
+}
+@media screen and (max-width: 600px) {
+  .Who-img {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-card {
+    margin-bottom: 32px;
+  }
 }
