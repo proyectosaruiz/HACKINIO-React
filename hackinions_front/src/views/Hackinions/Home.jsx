@@ -38,7 +38,7 @@ export const Home = () => {
     <section className="">
       {user ? <NewHackinion addHack={addHack} /> : null}
       <section className="hackList">
-        <h3>Ultimos Hackinions</h3>
+        <h3>Últimos Hackinions</h3>
         <HackinionList hackinions={hackinions} removeHack={removeHack} />
       </section>
     </section>

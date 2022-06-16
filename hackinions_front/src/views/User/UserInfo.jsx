@@ -62,10 +62,10 @@ const UserInfo = () => {
             </div>
             <div className="userInfo-button">
               <Button onClick={handleEditMode} primary={true}>
-                Modificar datos
+                <p className="button-text"> Modificar datos</p>
               </Button>
               <Button onClick={() => navigate("/changePass")} primary={true}>
-                Modificar contraseña
+                <p className="button-text"> Modificar contraseña</p>
               </Button>
             </div>
           </div>
@@ -74,6 +74,7 @@ const UserInfo = () => {
       {edit && (
         <div className="userInfo-edit-container">
           <form onSubmit={handleForm}>
+            <p className="titulohack">Modificar datos</p>
             <Fieldform
               placeholder={user.username}
               type="Apodo"
@@ -122,7 +123,7 @@ const UserInfo = () => {
             ></Fieldform>
 
             <Button type="submit" primary={true}>
-              <p className="register-button-text">Guardar nuevos datos</p>
+              <p className="button-text">Guardar nuevos datos</p>
             </Button>
             {error ? <ErrorMessage message={error}></ErrorMessage> : null}
           </form>
