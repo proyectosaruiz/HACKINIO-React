@@ -35,9 +35,7 @@ function Login() {
       <form onSubmit={handleForm}>
         <p className="titulohack">Iniciar sesión</p>
         <Fieldform
-          placeholder="Introduce tu apodo"
-          text="Email"
-          htmlFor="email"
+          placeholder="Introduce tu email"
           type="email"
           name="email"
           id="email"
@@ -47,9 +45,7 @@ function Login() {
         ></Fieldform>
         <Fieldform
           placeholder="Introduce tu contraseña"
-          htmlFor="pass"
           type="password"
-          text="Contraseña"
           name="pass"
           id="pass"
           value={password}

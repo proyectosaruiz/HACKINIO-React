@@ -7,7 +7,7 @@ function Fieldform({
   id,
   change,
   // htmlFor,
-  // text,
+  text = false,
   value,
   required = false,
   maxlength,
@@ -16,16 +16,30 @@ function Fieldform({
   return (
     <div>
       {/* <label htmlFor={htmlFor}>{text}</label> */}
-      <input
-        type={type}
-        name={name}
-        id={id}
-        value={value}
-        required={required}
-        onChange={change}
-        maxLength={maxlength}
-        placeholder={placeholder}
-      />
+      {!text && (
+        <input
+          type={type}
+          name={name}
+          id={id}
+          value={value}
+          required={required}
+          onChange={change}
+          maxLength={maxlength}
+          placeholder={placeholder}
+        />
+      )}
+      {text && (
+        <textarea
+          type={type}
+          name={name}
+          id={id}
+          value={value}
+          required={required}
+          onChange={change}
+          maxLength={maxlength}
+          placeholder={placeholder}
+        />
+      )}
     </div>
   );
 }
@@ -36,9 +50,7 @@ Fieldform.propTypes = {
   id: PropTypes.string,
   value: PropTypes.string,
   change: PropTypes.func,
-  htmlFor: PropTypes.string,
-  text: PropTypes.string,
-  maxlength: PropTypes.number,
+  maxlength: PropTypes.string,
 };
 
 export default Fieldform;

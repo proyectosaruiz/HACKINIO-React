@@ -4,6 +4,8 @@
   background-color: var(--primary-color);
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0;
 }
 .navbar-inner-container {
   width: 100%;
@@ -51,5 +53,20 @@
 
   .navbar-link {
     margin: 0;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .navbar-access-container {
+    flex-direction: column;
+  }
+
+  .navbar-inner-container {
+    font-size: 24px;
+  }
+  .navbar-link {
+    font-size: 16px;
+    margin: 0;
+    text-align: center;
   }
 }

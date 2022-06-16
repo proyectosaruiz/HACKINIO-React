@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { NewVote } from "./NewVote";
 import { AuthContext } from "../../context/AuthContext";
 import { deleteHackinionService } from "../../services/services";
+import Button from "../Button/Button";
 
 export const Hackinion = ({ hackinion, removeHack }) => {
   const { token, user } = useContext(AuthContext);
@@ -22,19 +23,24 @@ export const Hackinion = ({ hackinion, removeHack }) => {
         <p> {new Date(hackinion.created_at).toLocaleString()}</p>
       </div>
       {user && user.id === hackinion.userId ? (
-        <section>
-          <button
-            className="delete"
+        <section className="delete">
+          <Button
+            type="submit"
+            primary={true}
             onClick={() => {
-              if (window.confirm("Esta seguro"))
+              if (
+                window.confirm(
+                  "¿Estás seguro de que deseas eliminar el comentario?"
+                )
+              )
                 deleteHackinion(hackinion.hackId);
             }}
           >
-            X
-          </button>
+            <p className="button-text">Eliminar comentario</p>
+          </Button>
         </section>
       ) : null}
-      {user ? <NewVote hack={hackinion.hackId} /> : null}
+      {/* {user ? <NewVote hack={hackinion.hackId} /> : null} */}
     </article>
   );
 };

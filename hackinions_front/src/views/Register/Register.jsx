@@ -95,6 +95,7 @@ function Register() {
           value={bio}
           change={(e) => setBio(e.target.value)}
           maxlength="250"
+          text={true}
         ></Fieldform>
 
         <Fieldform
@@ -108,9 +109,7 @@ function Register() {
         ></Fieldform>
         <Fieldform
           placeholder="Escribe tu contraseña"
-          htmlFor="pass"
           type="password"
-          text="Contraseña"
           name="pass"
           id="pass"
           value={password}

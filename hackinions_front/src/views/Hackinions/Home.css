@@ -1,4 +1,4 @@
-input[name="content"],
+textarea[name="content"],
 input[name="title"] {
   width: 100%;
   border: 1px solid #f6f6f6;
@@ -9,18 +9,18 @@ input[name="title"] {
   font-size: 18px;
 }
 
+textarea[name="content"] {
+  resize: vertical;
+}
+
 .list-container {
   display: flex;
 }
 
-.error {
-  color: red;
-  font-size: 12px;
-}
-
 .hackList {
   width: 85%;
-  margin: auto;
+  margin: 200px auto;
+  word-break: break-word;
 }
 .hack-title {
   border-bottom: 2px solid var(--primary-color);
@@ -47,23 +47,14 @@ input[name="title"] {
   padding: 20px;
 }
 .delete {
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  font-size: 15px;
-  background: red;
-  border: red;
-  border-radius: 50%;
-  color: #fff;
-  padding: 0;
+  margin: 16px;
 }
 
 .new-hack-main {
   width: 80%;
   padding: 16px;
   border-radius: 10px;
-  margin: 64px auto;
+  margin: 128px auto;
   background-color: var(--secondary-color);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

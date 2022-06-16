@@ -4,6 +4,7 @@ import { sendHackinionService } from "../../services/services";
 
 import Button from "../../components/Button/Button";
 import Fieldform from "../../components/Fieldform/Fieldform";
+import { ErrorMessage } from "../ErrorMessage";
 
 export const NewHackinion = ({ addHack, id }) => {
   const { token } = useContext(AuthContext);
@@ -36,7 +37,6 @@ export const NewHackinion = ({ addHack, id }) => {
         <p className="titulohack">Nueva Hackinion</p>
         <form>
           <Fieldform
-            htmlFor="title"
             type="text"
             name="title"
             id="title"
@@ -44,9 +44,9 @@ export const NewHackinion = ({ addHack, id }) => {
             required={true}
             change={handeInput}
             placeholder="Título"
+            maxlength="100"
           />
           <Fieldform
-            htmlFor="content"
             type="text"
             name="content"
             id="content"
@@ -54,12 +54,14 @@ export const NewHackinion = ({ addHack, id }) => {
             required={true}
             change={handeInput}
             placeholder="Comentario"
+            text={true}
+            maxlength="250"
           />
           <Button type="submit" primary={true} onClick={handleForm}>
             <p className="button-text"> Enviar Hackinion</p>
           </Button>
 
-          {error ? <p>{error}</p> : null}
+          {error ? <ErrorMessage message={error}></ErrorMessage> : null}
         </form>
       </main>
     </>
