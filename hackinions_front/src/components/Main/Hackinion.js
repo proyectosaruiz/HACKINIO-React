@@ -1,10 +1,11 @@
 import { useContext } from "react";
-import { NewVote } from "./NewVote";
+// import { NewVote } from "./NewVote";
 import { AuthContext } from "../../context/AuthContext";
 import { deleteHackinionService } from "../../services/services";
 import Button from "../Button/Button";
 
 export const Hackinion = ({ hackinion, removeHack }) => {
+  console.log(hackinion);
   const { token, user } = useContext(AuthContext);
   const deleteHackinion = async (id) => {
     try {
@@ -19,7 +20,7 @@ export const Hackinion = ({ hackinion, removeHack }) => {
       <p className="hack-title">{hackinion.title}</p>
       <p className="hack-comment">{hackinion.content}</p>
       <div className="hack-user-data">
-        <p> Autor: {hackinion.name}</p>
+        <p> Autor: {hackinion.username}</p>
         <p> {new Date(hackinion.created_at).toLocaleString()}</p>
       </div>
       {user && user.id === hackinion.userId ? (
